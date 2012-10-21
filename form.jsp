@@ -4,9 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>upload</title>
- <script src="jquery.js" type="text/javascript"></script>
- <script src="jquery.filestyle.js" type="text/javascript"></script>
-</head>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.filestyle.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function() {
     	$("input.file_1").filestyle({ 
@@ -26,17 +25,6 @@
 }
 </style>
 
-<body>
-<p>${message}</p>
-
-<div class="entry">
-		<form action="upload" enctype="multipart/form-data" method="POST">
-			name <input type="text" name="name"/>
-			<br>
-		    <input type="file" name="select" id="formfile" class="file_1"/>
-		</form>
-</div>
-
 <script type="text/javascript">
     var file= document.getElementById('formfile');
 	file.onchange= function() 
@@ -45,6 +33,18 @@
         this.form.submit();
     };
  </script>
+</head> 
+
+ <body>
+<p>${message}</p>
+
+<div class="entry">
+  <form action="upload" enctype="multipart/form-data" method="POST">
+  name <input type="text" name="name"/>
+  <br>
+  <input type="file" name="select" id="formfile" class="file_1"/>
+  </form>
+</div>
 
 </body>
 </html>
